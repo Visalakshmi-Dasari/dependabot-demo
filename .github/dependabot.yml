@@ -5,11 +5,30 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: npm
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+          - "version-update:semver-major"
+  - package-ecosystem: "npm"
     directory: "/javascript"
     schedule:
       interval: "weekly"
-  - package-ecosystem: bundler
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+          - "version-update:semver-major"
+    
+  - package-ecosystem: "bundler"
     directory: "/ruby"
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+          - "version-update:semver-major"
